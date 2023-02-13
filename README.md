@@ -8,5 +8,5 @@ Goal is to make simple Rock Paper Scissors game.
 First part is done using only JS. All info is printed using console.
 
 ### Benefits:
-    1. Getting know how **functions** work with each other.
-    2. Creating simple *for* loop.
+1. Getting know how **functions** work with each other.
+2. Creating simple *for* loop.
