@@ -71,7 +71,9 @@ function game() {
     }
     else if (playerScore < computerScore) {
         console.log('Better luck next time! You lost!');
-
+    }
+    else if (playerScore === computerScore) {
+        console.log('Game ended as a tie.')
     }
 }
 
