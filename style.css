@@ -36,13 +36,19 @@ button {
     color: #FFF;
 }
 
+button:hover {
+    border: 2px solid #0F0F0F;
+    background-color: #FFF;
+    color: #0F0F0F;
+}
+
 .button {
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
-.button-start {
+.button-main {
     font-size: 36px;
     font-weight: 700;
     padding: 10px;

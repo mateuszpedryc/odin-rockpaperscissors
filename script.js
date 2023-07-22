@@ -1,6 +1,24 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
+const btnStart = document.querySelector('#btnStart');
+
+btnStart.onclick = startGame;
+
+function startGame() {
+    alert("You started a game");
+};
+
+
+
+
+
+
+
+
+
+
 //Function to generate computer choice:
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
@@ -46,7 +64,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 //Function to play playRound function 5 times, store scores and display a winner.
-function game() {
+/*function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt('Choose : Rock, Paper or Scissors').toLowerCase();
         let computerSelection = getComputerChoice();
@@ -76,6 +94,7 @@ function game() {
         console.log('Game ended as a tie.')
     }
 }
+*/
 
 game();
 
