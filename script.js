@@ -7,7 +7,69 @@ const btnStart = document.querySelector('#btnStart');
 btnStart.onclick = startGame;
 
 function startGame() {
-    alert("You started a game");
+    //alert("You started a game");
+    //Change game title
+    const gameTitle = document.querySelector('#game-title');
+    gameTitle.textContent = 'Let\`s play!';
+
+    const title = document.querySelector('.title');
+    title.setAttribute('class', 'title-top');
+
+    const content = document.querySelector('.content');
+    const button = document.querySelector('.button');
+
+    //Creating elements for the scoreboard
+    const score = document.createElement('div');
+    score.classList.add('score');
+
+    const playerScoreBox = document.createElement('div');
+    const computerScoreBox = document.createElement('div');
+    playerScoreBox.classList.add('player-score');
+    computerScoreBox.classList.add('computer-score');
+
+    const playerScoreValue = document.createElement('p');
+    const computerScoreValue = document.createElement('p');
+    const dash = document.createElement('div');
+    playerScoreValue.textContent = '0';
+    playerScoreValue.setAttribute('id', 'player-score');
+    computerScoreValue.textContent = '0';
+    computerScoreValue.setAttribute('id', 'computer-score');
+    dash.textContent = '-';
+
+    playerScoreBox.appendChild(playerScoreValue);
+    computerScoreBox.appendChild(computerScoreValue);
+
+    score.appendChild(playerScoreBox);
+    score.appendChild(dash);
+    score.appendChild(computerScoreBox);
+
+    content.appendChild(score);
+    content.insertBefore(score, button);
+
+    //Create three buttons for player selection
+    const buttonsBox = document.createElement('div');
+    buttonsBox.classList.add('buttons-box');
+
+    const buttonRock = document.createElement('button');
+    const buttonPaper = document.createElement('button');
+    const buttonScissors = document.createElement('button');
+
+    buttonRock.classList.add('button-play');
+    buttonPaper.classList.add('button-play');
+    buttonScissors.classList.add('button-play');
+
+    buttonRock.textContent = 'Rock';
+    buttonPaper.textContent = 'Paper';
+    buttonScissors.textContent = 'Scissors';
+
+
+
+    buttonsBox.appendChild(buttonRock);
+    buttonsBox.appendChild(buttonPaper);
+    buttonsBox.appendChild(buttonScissors);
+
+    content.appendChild(buttonsBox);
+    content.insertBefore(buttonsBox, button);
 };
 
 
